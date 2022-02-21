@@ -1,0 +1,13 @@
+<div class="card mx-auto" style="width: 18rem;height: 500px;" >
+  <img [src]="productCard.image" height="250px" class="card-img-top" alt="..." />
+  <div class="card-body d-flex flex-column justify-content-between">
+    <h5 class="card-title">Name : {{productCard.title}}</h5>
+    <h5 class="card-title">category : {{productCard.category}}</h5>
+    <h5 class="card-title">price : {{productCard.price  | customPipe}}</h5>
+    <h5 class="card-title">{{ productCard.rating.count | showStock}}</h5>
+
+    <button (click)="handleClick()"  class="btn btn-primary ">
+      Add Car
+    </button>
+  </div>
+</div>
